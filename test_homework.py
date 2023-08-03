@@ -12,6 +12,7 @@ def test_greeting():
     output = f"Привет, {name}! Тебе {age} лет."
     # Проверяем результат
     assert output == "Привет, Анна! Тебе 25 лет."
+    print(output)
 
 
 def test_rectangle():
@@ -45,6 +46,9 @@ def test_circle():
     length = 2*pi*r
     assert length == 144.51326206513048
 
+    print(f'Площадь круга - {area}')
+    print(f'Длина окружности - {length}')
+
 
 def test_random_list():
     """
@@ -66,7 +70,7 @@ def test_unique_elements():
     """
     l = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 10]
     # TODO удалите повторяющиеся элементы
-    l = list(set([1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8, 9, 10, 10]))
+    l = list(set(l))
     assert isinstance(l, list)
     assert len(l) == 10
     assert l == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
